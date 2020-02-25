@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Courgette|Caveat|Rajdhani|Cinzel");
+
+.featuredArticles {
+  text-align: center;
+  font-family: Courgette;
+}
+
+@media only screen and (max-width: 500px) {
+  .featuredArticles {
+    font-size: 15px;
+  }
+}

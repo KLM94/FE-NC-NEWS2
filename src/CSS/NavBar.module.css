@@ -1,0 +1,27 @@
+.navBtn {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  /* display: inline-block; */
+  color: #000000;
+  padding: 6px 24px;
+  width: 50%;
+  cursor: pointer;
+  margin-top: 0.5em;
+  font-size: 15px;
+}
+
+.navBtn:active {
+  top: 1px;
+}
+
+.navBtn:hover {
+  background-color: #7540ca;
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .navBtn {
+    margin-top: 0em;
+    font-size: 12px;
+  }
+}

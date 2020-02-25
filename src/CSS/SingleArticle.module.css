@@ -1,0 +1,12 @@
+@import "https://fonts.googleapis.com/css?family=Raleway";
+
+.fullarticle {
+  border-style: solid;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .fullarticle {
+    margin-top: 1em;
+  }
+}

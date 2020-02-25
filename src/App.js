@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./Components/Header";
+import NavBar from "./Components/NavBar";
+import Homepage from "./Components/Homepage";
+import ArticlesList from "./Components/ArticlesList";
+import SingleArticle from "./Components/SingleArticle";
+import Topics from "./Components/Topics";
+import { Router } from "@reach/router";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = { loggedInUser: "weegenbump" };
+
+  render() {
+    const { loggedInUser } = this.state;
+    return (
+      <main>
+        <Header loggedInUser={loggedInUser} />
+        <NavBar />
+        <Router>
+          <Homepage path="/" />
+          <ArticlesList path="/articles" loggedInUser={loggedInUser} />
+          <SingleArticle path="/articles/:id" />
+          <Topics path="/topics" />
+          <ArticlesList path="/articles/topics/:topic" />
+        </Router>
+      </main>
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Caveat|Rajdhani|Cinzel");
+
+.gridContainer {
+  display: grid;
+  border-style: solid;
+  /* background-color: #c0baf8; */
+}
+
+.header {
+  text-align: center;
+  font-family: Cinzel;
+  font-size: 100px;
+  text-shadow: 2px 2px #a8a7a7;
+}
+
+.headerCaption {
+  text-align: center;
+}
+
+.homeBtn {
+  text-align: left;
+}
+
+.loggedInAs {
+  text-align: right;
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    font-size: 30px;
+  }
+  .gridContainer {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .headerCaption {
+    font-size: 12px;
+  }
+}
