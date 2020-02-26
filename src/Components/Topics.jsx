@@ -22,7 +22,10 @@ class Topics extends Component {
       <div className={styles.topicsContainer}>
         {topics.map(topic => (
           <div key={topic.slug}>
-            <Link to={`/articles/topics`} className={styles.topicLink}>
+            <Link
+              to={`/articles/topics/${topic.slug}`}
+              className={styles.topicLink}
+            >
               {topic.slug}
             </Link>
             <div className={styles.topicDescription}>{topic.description}</div>

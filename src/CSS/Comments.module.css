@@ -1,0 +1,15 @@
+.commentsGrid {
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.commentsContainer {
+  border-style: solid;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  .commentsContainer {
+    padding: 2em;
+  }
+}

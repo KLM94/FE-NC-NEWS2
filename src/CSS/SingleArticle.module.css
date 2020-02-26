@@ -3,6 +3,7 @@
 .fullarticle {
   border-style: solid;
   text-align: center;
+  padding: 0.5em;
 }
 
 @media only screen and (max-width: 500px) {
