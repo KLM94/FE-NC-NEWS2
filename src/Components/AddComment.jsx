@@ -5,7 +5,8 @@ import { postComment } from "../Api";
 class AddComment extends Component {
   state = {
     username: "weegembump",
-    body: ""
+    body: "",
+    author: ""
   };
 
   handleChange = event => {
@@ -15,8 +16,8 @@ class AddComment extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const { body } = this.state;
-    const { newPostedComment } = this.props;
-    postComment({ body }).then(newComment => {
+    const { newPostedComment, articleId } = this.props;
+    postComment(body, articleId, this.state.username).then(newComment => {
       newPostedComment(newComment);
       this.setState({ body: "" });
     });
@@ -31,6 +32,8 @@ class AddComment extends Component {
               className={styles.textArea}
               rows="8"
               cols="60"
+              type="text"
+              id="body"
               placeholder="Type something..."
               value={this.state.body}
               onChange={this.handleChange}

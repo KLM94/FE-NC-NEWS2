@@ -20,9 +20,22 @@ export const getComments = id => {
   return axios.get(baseURL);
 };
 
-export const postComment = (reqBody, id) => {
-  const baseURL = `https://kirstys-nc-news.herokuapp.com/api/articles/${id}/comments`;
-  return axios.post(baseURL, reqBody).then(({ data }) => {
-    return data.comment;
-  });
+export const postComment = (body, article_id, username) => {
+  const baseURL = `https://kirstys-nc-news.herokuapp.com/api/articles/${article_id}/comments`;
+  return axios
+    .post(baseURL, { body, username })
+    .then(res => {
+      return res.data.comment;
+    })
+    .catch(err => console.dir(err));
+};
+
+export const deleteComment = comment_id => {
+  const baseURL = `https://kirstys-nc-news.herokuapp.com/api/comments/${comment_id}`;
+  return axios
+    .delete(baseURL)
+    .then(res => {
+      return res.data.comment;
+    })
+    .catch(err => console.dir(err));
 };

@@ -3,7 +3,6 @@ import { getArticle } from "../Api";
 import Comments from "./Comments";
 import LoadingIndicator from "../Components/LoadingIndicator";
 import styles from "../CSS/SingleArticle.module.css";
-import AddComment from "./AddComment";
 
 class SingleArticle extends Component {
   state = { article: [], isLoading: true };
@@ -31,10 +30,7 @@ class SingleArticle extends Component {
         <br></br>
         <section className={styles.articlebody}>{article.body}</section>
         <p>{`Votes: ${article.votes}`}</p>
-        <AddComment
-          addComment={this.addComment}
-          articleId={this.props.article_id}
-        />
+
         <p>{` Scroll below to view ${article.comment_count} comments`}</p>
         <Comments article_id={article.article_id} />
       </div>
