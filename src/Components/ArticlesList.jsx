@@ -15,12 +15,14 @@ class ArticlesList extends Component {
       .catch(err => console.dir(err));
   }
 
-  // componentDidUpdate(prevState) {
-  //   if (this.state.sortBy !== prevState.sortBy)
-  //     getArticles(this.props.topic, this.state.sortBy).then(response => {
-  //       this.setState({ articleData: response.data.articles });
-  //     });
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.sortBy !== prevState.sortBy)
+      getArticles(this.props.topic, this.state.sortBy)
+        .then(response => {
+          this.setState({ articles: response.data.articles });
+        })
+        .catch(err => console.dir(err));
+  }
 
   handleChange = event => {
     this.setState({ sortBy: event.target.value });

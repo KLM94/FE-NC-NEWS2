@@ -19,6 +19,12 @@ export const Header = props => {
         </p>
       </div>
     </div>
+
+    // Button ->>> log in
+    // ->>> onClick, setState as user - logged in as weegembump
+    // Update state from being an empty string to be weegembump
+    // {if (this.state.user === comment.author)} <= Check that the logged in user is equal to the author.
+    // {if (this.state.user != '')} <= Check that the user is signed in before being able to create posts/articles.
   );
 };
 

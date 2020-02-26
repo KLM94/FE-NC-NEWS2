@@ -7,7 +7,7 @@ export const getArticle = id => {
 
 export const getArticles = (topic, sortBy) => {
   const baseURL = `https://kirstys-nc-news.herokuapp.com/api/articles`;
-  return axios.get(baseURL, { params: { topic: topic } });
+  return axios.get(baseURL, { params: { topic: topic, sort_by: sortBy } });
 };
 
 export const getTopics = () => {

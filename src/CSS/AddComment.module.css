@@ -1,5 +1,11 @@
 .textArea {
-  width: 200px;
+  width: 400px;
   text-align: center;
   border-style: outset;
+}
+
+@media only screen and (max-width: 500px) {
+  .textArea {
+    width: 200px;
+  }
 }
