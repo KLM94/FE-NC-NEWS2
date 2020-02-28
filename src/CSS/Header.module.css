@@ -1,39 +1,74 @@
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Caveat|Rajdhani|Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Radley|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
 
-.gridContainer {
-  display: grid;
+.box {
   border-style: solid;
-  /* background-color: #c0baf8; */
+  text-align: center;
+  display: flex;
+  /* background-color: #a53860; */
+}
+
+.greeting {
+  text-align: right;
+  padding-right: 1%;
+}
+
+.headerText {
+  font-family: "Cinzel";
+  font-size: 60px;
+  margin-bottom: 0px;
 }
 
 .header {
+  flex: 1;
+  margin: 0px;
+  padding: 0px;
   text-align: center;
-  font-family: Cinzel;
-  font-size: 100px;
-  text-shadow: 2px 2px #a8a7a7;
+  font-family: "Radley";
+  font-size: 0px;
+  /* text-shadow: 2px 2px #838380; */
+  /* background-color: #a53860; */
 }
 
 .headerCaption {
+  margin-bottom: 0.5em;
   text-align: center;
+  font-size: 25px;
+  font-family: "Indie Flower";
 }
 
 .homeBtn {
+  flex: 1;
   text-align: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #f5dd90;
+  text-shadow: 1px 2px #f5dd90;
 }
 
-.loggedInAs {
+.loggedInContainer {
+  margin-right: 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loginBtn {
   text-align: right;
+  margin-right: 3.5em;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-
 @media only screen and (max-width: 500px) {
   .header {
-    font-size: 30px;
+    font-size: 40px;
   }
   .gridContainer {
     margin-top: 0px;
     padding: 0px;
   }
   .headerCaption {
+    font-size: 14px;
+  }
+  .loggedInContainer {
     font-size: 12px;
   }
 }

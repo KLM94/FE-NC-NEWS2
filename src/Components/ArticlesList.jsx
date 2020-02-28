@@ -33,7 +33,7 @@ class ArticlesList extends Component {
     const { isLoading } = this.state;
     if (isLoading) return <LoadingIndicator />;
     return (
-      <div>
+      <div className={styles.sortbyGrid}>
         <label className={styles.sortBy}>Sort articles by: </label>
         <select onChange={this.handleChange}>
           <option value="created_at">Date Created</option>

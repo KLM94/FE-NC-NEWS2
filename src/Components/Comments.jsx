@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getComments, deleteComment } from "../Api";
 import styles from "../CSS/Comments.module.css";
 import AddComment from "./AddComment";
+import Votes from "./Voting";
 
 class Comments extends Component {
   state = {
@@ -35,11 +36,19 @@ class Comments extends Component {
     this.setState({ comments: filteredComments });
   };
 
-  // How to show the post comment box? can't move above if statement
   render() {
     const { comments } = this.state;
     if (comments === undefined) {
-      return "Sorry, there are no comments!";
+      return (
+        <div>
+          <p> Be the first to post a comment!</p>
+
+          <AddComment
+            newPostedComment={this.newPostedComment}
+            articleId={this.props.article_id}
+          />
+        </div>
+      );
     } else {
       return (
         <div className={styles.comments}>
@@ -47,6 +56,7 @@ class Comments extends Component {
             newPostedComment={this.newPostedComment}
             articleId={this.props.article_id}
           />
+
           <div className={styles.commentsGrid}>
             {comments.map(comment => {
               return (
@@ -57,7 +67,11 @@ class Comments extends Component {
                       {`${new Date(comment.created_at).toLocaleDateString()} `}
                     </p>
                     <p>{comment.body}</p>
-                    <p>Votes: {comment.votes}</p>
+
+                    <Votes
+                      comment_id={comment.comment_id}
+                      votes={comment.votes}
+                    />
                     <button
                       className={styles.deleteButton}
                       onClick={() => {

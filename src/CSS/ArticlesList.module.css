@@ -3,6 +3,10 @@
   margin-bottom: 10px;
 }
 
+.sortbyGrid {
+  text-align: right;
+  margin-right: 1em;
+}
 .sortBy {
   font-size: 15px;
   margin-left: 5px;

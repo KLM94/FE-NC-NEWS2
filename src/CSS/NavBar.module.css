@@ -1,13 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+
+.btnContainer {
+  text-align: right;
+}
+
 .navBtn {
   background-color: #ffffff;
   border: 1px solid #000000;
+  border-radius: 20px;
   /* display: inline-block; */
   color: #000000;
   padding: 6px 24px;
-  width: 50%;
+  width: 20%;
   cursor: pointer;
   margin-top: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
   font-size: 15px;
+  /* font-family: "Indie Flower"; */
 }
 
 .navBtn:active {
@@ -15,13 +25,17 @@
 }
 
 .navBtn:hover {
-  background-color: #7540ca;
-  color: white;
+  background-color: #f5dd90;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 500px) {
   .navBtn {
-    margin-top: 0em;
+    margin-top: 1em;
+    margin-bottom: 0em;
     font-size: 12px;
+    text-align: center;
+    width: 40%;
   }
 }
