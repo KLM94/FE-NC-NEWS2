@@ -1,39 +1,38 @@
-@import url("https://fonts.googleapis.com/css?family=Radley|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
 
 .box {
   border-style: solid;
   text-align: center;
-  display: flex;
-  /* background-color: #a53860; */
-}
-
-.greeting {
-  text-align: right;
-  padding-right: 1%;
-}
-
-.headerText {
-  font-family: "Cinzel";
-  font-size: 60px;
-  margin-bottom: 0px;
-}
-
-.header {
-  flex: 1;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-  font-family: "Radley";
-  font-size: 0px;
-  /* text-shadow: 2px 2px #838380; */
-  /* background-color: #a53860; */
+  background-color: #a53860;
+  margin: 0;
+  padding: 0;
 }
 
 .headerCaption {
-  margin-bottom: 0.5em;
-  text-align: center;
-  font-size: 25px;
   font-family: "Indie Flower";
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.greeting {
+  flex: 1;
+  display: flex;
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: #f5dd90;
+  text-shadow: 1px 2px #000000;
+}
+
+.headerText {
+  text-align: center;
+  color: bisque;
+  margin: 0;
+  padding: 0;
+  font-family: Gravitas One;
+  font-size: 50px;
+  text-shadow: 2px 2px #000000;
 }
 
 .homeBtn {
@@ -44,6 +43,36 @@
   color: #f5dd90;
   text-shadow: 1px 2px #f5dd90;
 }
+/* .greeting {
+  text-align: right;
+  padding-right: 1%;
+}
+
+.headerText {
+  font-family: "Rozha One";
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+
+.header {
+  flex: 1;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-family: "Rozha One";
+  font-size: 0px;
+  /* text-shadow: 2px 2px #838380; 
+  /* background-color: #a53860; 
+}
+
+.headerCaption {
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Indie Flower";
+}
+
+
 
 .loggedInContainer {
   margin-right: 1em;
@@ -56,7 +85,8 @@
   margin-right: 3.5em;
   margin-top: 0px;
   margin-bottom: 0px;
-}
+} */
+
 @media only screen and (max-width: 500px) {
   .header {
     font-size: 30px;
