@@ -59,16 +59,26 @@
 }
 @media only screen and (max-width: 500px) {
   .header {
-    font-size: 40px;
+    font-size: 30px;
   }
   .gridContainer {
     margin-top: 0px;
     padding: 0px;
   }
   .headerCaption {
-    font-size: 14px;
+    font-size: 15px;
   }
   .loggedInContainer {
     font-size: 12px;
+  }
+  .headerText {
+    text-align: center;
+    font-size: medium;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .greeting {
+    font-size: 10px;
+    text-align: center;
   }
 }
