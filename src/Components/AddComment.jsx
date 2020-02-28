@@ -34,7 +34,7 @@ class AddComment extends Component {
               cols="60"
               type="text"
               id="body"
-              placeholder="Type something..."
+              placeholder="Say what's on your mind..."
               value={this.state.body}
               onChange={this.handleChange}
               required

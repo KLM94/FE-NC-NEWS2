@@ -8,15 +8,14 @@ class Comments extends Component {
   state = {
     comments: [],
     username: "weegembump",
-    author: ""
+    author: "",
+    articles: []
   };
 
   componentDidMount() {
-    getComments(this.props.article_id)
-      .then(response => {
-        this.setState({ comments: response.data.comments });
-      })
-      .catch(err => console.dir(err));
+    getComments(this.props.article_id).then(response => {
+      this.setState({ comments: response.data.comments || [] });
+    });
   }
 
   newPostedComment = addedNewComment => {
@@ -37,7 +36,8 @@ class Comments extends Component {
   };
 
   render() {
-    const { comments } = this.state;
+    const { comments, username } = this.state;
+
     if (comments === undefined) {
       return (
         <div>
@@ -51,39 +51,50 @@ class Comments extends Component {
       );
     } else {
       return (
-        <div className={styles.comments}>
-          <AddComment
-            newPostedComment={this.newPostedComment}
-            articleId={this.props.article_id}
-          />
+        <div>
+          {/* <p>
+            {article.comment_count > 1
+              ? `There are ${article.comment_count} comments for this article.`
+              : `There is ${article.comment_count} comment for this article.`}
+          </p> */}
+          <div className={styles.comments}>
+            <AddComment
+              newPostedComment={this.newPostedComment}
+              articleId={this.props.article_id}
+            />
 
-          <div className={styles.commentsGrid}>
-            {comments.map(comment => {
-              return (
-                <div key={comment.comment_id}>
-                  <div className={styles.commentsContainer}>
-                    <p>
-                      Posted by <b>{comment.author}</b> on{" "}
-                      {`${new Date(comment.created_at).toLocaleDateString()} `}
-                    </p>
-                    <p>{comment.body}</p>
+            <div className={styles.commentsGrid}>
+              {comments.map(comment => {
+                return (
+                  <div key={comment.comment_id}>
+                    <div className={styles.commentsContainer}>
+                      <p>
+                        Posted by <b>{comment.author}</b> on{" "}
+                        {`${new Date(
+                          comment.created_at
+                        ).toLocaleDateString()} `}
+                      </p>
+                      <p>{comment.body}</p>
 
-                    <Votes
-                      comment_id={comment.comment_id}
-                      votes={comment.votes}
-                    />
-                    <button
-                      className={styles.deleteButton}
-                      onClick={() => {
-                        this.handleDelete(comment.comment_id);
-                      }}
-                    >
-                      Delete comment
-                    </button>
+                      <Votes
+                        comment_id={comment.comment_id}
+                        votes={comment.votes}
+                      />
+                      {comment.author === username && (
+                        <button
+                          className={styles.deleteButton}
+                          onClick={() => {
+                            this.handleDelete(comment.comment_id);
+                          }}
+                        >
+                          Delete comment
+                        </button>
+                      )}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       );

@@ -40,15 +40,8 @@ class SingleArticle extends Component {
         <br></br>
         <section className={styles.articlebody}>{article.body}</section>
         <Voting article_id={article.article_id} votes={article.votes} />
-
-        <div>
-          <p>
-            {article.comment_count === 1
-              ? `There is ${article.comment_count} comment for this article.`
-              : `There are ${article.comment_count} comments for this article.`}
-          </p>
-          <Comments article_id={article.article_id} />
-        </div>
+        <p>Got something to say?</p>
+        <Comments article_id={article.article_id} />
       </div>
     );
   }
