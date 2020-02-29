@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
 
-.featuredArticles {
+.latestArticles {
   text-align: center;
-  font-family: "Indie Flower";
+  font-family: "DM Serif Display";
 }
 
 @media only screen and (max-width: 500px) {
-  .featuredArticles {
-    font-size: 15px;
+  .latestArticles {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 }

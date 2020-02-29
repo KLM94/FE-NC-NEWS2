@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { patchVotesByArticleId, patchVotesByCommentId } from "../Api";
 import styles from "../CSS/Voting.module.css";
+import { FaHeart } from "react-icons/fa";
+import { IoMdArrowDropupCircle, IoMdArrowDropdownCircle } from "react-icons/io";
 
 class Votes extends Component {
   state = { updatedVotes: 0 };
@@ -25,25 +27,32 @@ class Votes extends Component {
     const { votes } = this.props;
     const { updatedVotes } = this.state;
     return (
-      <div className={styles.articleVotes}>
+      <section>
+        <div className={styles.articleVotesContainer}>
+          <button
+            className={styles.votebtn}
+            disabled={updatedVotes > 0}
+            onClick={() => {
+              this.handleClick(1);
+            }}
+          >
+            <IoMdArrowDropupCircle size={20} />
+          </button>
+        </div>
+        <div className={styles.voteCount}>
+          <FaHeart size={15} />
+          {votes + updatedVotes}
+        </div>
         <button
-          disabled={updatedVotes > 0}
-          onClick={() => {
-            this.handleClick(1);
-          }}
-        >
-          Vote up
-        </button>
-        <p className={styles.voteCount}>Votes: {votes + updatedVotes}</p>
-        <button
+          className={styles.votebtn}
           disabled={updatedVotes < 0}
           onClick={() => {
             this.handleClick(-1);
           }}
         >
-          Vote down
+          <IoMdArrowDropdownCircle size={20} />
         </button>
-      </div>
+      </section>
     );
   }
 }

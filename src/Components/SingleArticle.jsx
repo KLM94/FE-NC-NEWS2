@@ -30,16 +30,19 @@ class SingleArticle extends Component {
 
     return (
       <div className={styles.fullarticle} key="article">
-        <section className={styles.votes}></section>
+        {/* <section className={styles.votes}></section> */}
         <h2 className={styles.articletitle}> {article.title} </h2>
-        <section>
-          <em>{`Published by ${article.author} on ${new Date(
-            article.created_at
-          ).toLocaleDateString()}`}</em>
-        </section>
+        <div className={styles.publishedby}>
+          <em>
+            Published by <b>{`${article.author}`} </b> on{" "}
+            {new Date(article.created_at).toLocaleDateString()}
+          </em>
+        </div>
         <br></br>
         <section className={styles.articlebody}>{article.body}</section>
-        <Voting article_id={article.article_id} votes={article.votes} />
+        <div className={styles.votes}>
+          <Voting article_id={article.article_id} votes={article.votes} />
+        </div>
         <p>Got something to say?</p>
         <Comments article_id={article.article_id} />
       </div>

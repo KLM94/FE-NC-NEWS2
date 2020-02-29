@@ -35,7 +35,7 @@ class ArticlesList extends Component {
     return (
       <div className={styles.sortbyGrid}>
         <label className={styles.sortBy}>Sort articles by: </label>
-        <select onChange={this.handleChange}>
+        <select className={styles.dropdown} onChange={this.handleChange}>
           <option value="created_at">Date Created</option>
           <option value="comment_count">Comments</option>
           <option value="votes">Votes</option>

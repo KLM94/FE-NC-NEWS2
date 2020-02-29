@@ -1,0 +1,11 @@
+.votebtn {
+  border: none;
+  color: bisque;
+  background-color: transparent;
+  font-size: 20px;
+  outline: none;
+}
+
+.voteCount {
+  margin: 0px;
+}

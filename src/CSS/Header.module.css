@@ -6,23 +6,24 @@
   background-color: #a53860;
   margin: 0;
   padding: 0;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.466);
 }
 
 .headerCaption {
   font-family: "Indie Flower";
-  font-size: 20px;
+  font-size: 25px;
   margin: 0;
   padding: 0;
 }
 
 .greeting {
   flex: 1;
-  display: flex;
   text-align: right;
   margin-top: 5px;
   margin-right: 5px;
   color: #f5dd90;
   text-shadow: 1px 2px #000000;
+  font-size: 20px;
 }
 
 .headerText {
@@ -31,8 +32,8 @@
   margin: 0;
   padding: 0;
   font-family: Gravitas One;
-  font-size: 50px;
-  text-shadow: 2px 2px #000000;
+  font-size: 70px;
+  text-shadow: 3px 3px #00000062;
 }
 
 .homeBtn {
@@ -40,7 +41,7 @@
   text-align: left;
   margin-top: 5px;
   margin-left: 5px;
-  color: #f5dd90;
+  color: bisque;
   text-shadow: 1px 2px #f5dd90;
 }
 /* .greeting {
@@ -96,7 +97,7 @@
     padding: 0px;
   }
   .headerCaption {
-    font-size: 15px;
+    font-size: 12px;
   }
   .loggedInContainer {
     font-size: 12px;
@@ -106,6 +107,7 @@
     font-size: medium;
     display: flex;
     justify-content: space-evenly;
+    font-size: 25px;
   }
   .greeting {
     font-size: 10px;

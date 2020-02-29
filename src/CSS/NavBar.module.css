@@ -1,23 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
 
 .btnContainer {
   text-align: right;
 }
 
 .navBtn {
-  background-color: #ffffff;
+  background-color: #a53860;
   border: 1px solid #000000;
   border-radius: 20px;
   /* display: inline-block; */
-  color: #000000;
+  color: bisque;
   padding: 6px 24px;
   width: 20%;
   cursor: pointer;
   margin-top: 0.5em;
   margin-right: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 15px;
-  /* font-family: "Indie Flower"; */
+  margin-bottom: 0.2em;
+  font-size: 23px;
+  font-family: "Rozha One";
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.192);
 }
 
 .navBtn:active {
@@ -25,8 +26,8 @@
 }
 
 .navBtn:hover {
-  background-color: #f5dd90;
-  color: rgb(0, 0, 0);
+  background-color: bisque;
+  color: #a53860;
   text-decoration: underline;
 }
 

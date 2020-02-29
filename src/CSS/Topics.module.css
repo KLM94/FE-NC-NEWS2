@@ -1,8 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+
 .topicsContainer {
   margin-top: 2em;
   margin-left: 2em;
+  height: 100%;
 }
 
 .topicLink {
+  border: black;
+  border-style: outset;
+  box-shadow: black;
   font-size: 50px;
 }
+
+.gridRow {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100px;
+  /* margin: 30px; */
+  text-align: center;
+  line-height: 75px;
+}
+
+.codingTitle {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* .cookingTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.footballTitle {
+  margin-left: 20px;
+  position: absolute;
+  top: 25%;
+  right: 75%;
+} */
