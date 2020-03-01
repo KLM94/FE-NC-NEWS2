@@ -1,5 +1,12 @@
+.loading {
+  margin: 0px;
+  padding: 250px;
+  height: 100%;
+}
+
 @media only screen and (max-width: 500px) {
   .loading {
     margin-top: 20px;
+    margin-bottom: 0px;
   }
 }

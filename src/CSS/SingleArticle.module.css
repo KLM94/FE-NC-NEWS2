@@ -1,14 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower|Open+Sans+Condensed:300");
 
 .fullarticle {
   border-style: solid;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 50px;
   margin-left: 10em;
-  margin-bottom: 5em;
-  padding-bottom: 2em;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
   width: 70%;
   background-image: linear-gradient(#af3b66, #f094b6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
 }
 
 .articletitle {
@@ -17,7 +20,8 @@
 
 .publishedby {
   font-size: 20px;
-  font-family: "Indie Flower";
+  font-family: "Rajdhani";
+  color: bisque;
 }
 
 .votes {
@@ -25,6 +29,11 @@
   padding: 0px;
   font-size: 25px;
   font-family: "Rozha One";
+}
+
+.articlebody {
+  font-family: "Rajdhani";
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 500px) {

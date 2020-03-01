@@ -1,15 +1,42 @@
-import React from "react";
+import React, { Component } from "react";
 import styles from "../CSS/Homepage.module.css";
-import ArticlesList from "./ArticlesList";
+import { getArticles } from "../Api";
+import ArticleCard from "./ArticleCard";
 
-const Homepage = () => {
-  return (
-    <main>
-      <h1 className={styles.latestArticles}>Latest Articles</h1>
-      {/* slice */}
-      <ArticlesList />
-    </main>
-  );
-};
+class Homepage extends Component {
+  state = { articles: [] };
+
+  componentDidMount() {
+    getArticles()
+      .then(response => {
+        this.setState({ articles: response.data.articles });
+      })
+      .catch(err => console.dir(err));
+  }
+
+  render() {
+    const { articles } = this.state;
+    let size = 3;
+
+    return (
+      <div>
+        <h1 className={styles.latestArticles}>Latest Articles</h1>
+        <div className={styles.articles}>
+          {articles.slice(0, size).map(article => {
+            return (
+              <div key={article.id}>
+                {" "}
+                <div className={styles.articlecards}>
+                  {" "}
+                  <ArticleCard articles={[article]} />{" "}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Homepage;

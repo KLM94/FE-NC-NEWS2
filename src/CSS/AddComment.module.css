@@ -1,7 +1,28 @@
 .textArea {
-  width: 400px;
   text-align: center;
-  border-style: outset;
+  border-style: none;
+  -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  height: 100px;
+  margin: 10px;
+  overflow: auto;
+  padding: 7px 10px;
+  width: 300px;
+  font-family: "Rajdhani";
+  font-size: 15px;
+  background-color: bisque;
+}
+
+.postbtn {
+  background-color: bisque;
+  font-family: "Rajdhani";
+  font-size: 15px;
+  font-weight: bold;
+  width: 20%;
+  border-style: none;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 500px) {

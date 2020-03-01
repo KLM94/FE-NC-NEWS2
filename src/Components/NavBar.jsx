@@ -6,6 +6,9 @@ const NavBar = () => {
   return (
     <nav id="nav">
       <div className={styles.btnContainer}>
+        <Link to="/">
+          <button className={styles.navBtn}>Home</button>
+        </Link>
         <Link to="/articles">
           <button className={styles.navBtn}>Articles</button>
         </Link>

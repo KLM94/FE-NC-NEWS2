@@ -57,29 +57,35 @@ class Comments extends Component {
               ? `There are ${article.comment_count} comments for this article.`
               : `There is ${article.comment_count} comment for this article.`}
           </p> */}
-          <div className={styles.comments}>
-            <AddComment
-              newPostedComment={this.newPostedComment}
-              articleId={this.props.article_id}
-            />
-
+          <div className={styles.commentContainer}>
+            <div className={styles.addcomment}>
+              <p>Got something to say?</p>
+              <AddComment
+                newPostedComment={this.newPostedComment}
+                articleId={this.props.article_id}
+              />
+            </div>
+            <div className={styles.saying}>Comments:</div>
             <div className={styles.commentsGrid}>
               {comments.map(comment => {
                 return (
                   <div key={comment.comment_id}>
                     <div className={styles.commentsContainer}>
+                      <div className={styles.commentbody}>
+                        <p>{comment.body}</p>{" "}
+                      </div>
+                      <div className={styles.votes}>
+                        <Votes
+                          comment_id={comment.comment_id}
+                          votes={comment.votes}
+                        />
+                      </div>
                       <p>
                         Posted by <b>{comment.author}</b> on{" "}
                         {`${new Date(
                           comment.created_at
                         ).toLocaleDateString()} `}
                       </p>
-                      <p>{comment.body}</p>
-
-                      <Votes
-                        comment_id={comment.comment_id}
-                        votes={comment.votes}
-                      />
                       {comment.author === username && (
                         <button
                           className={styles.deleteButton}

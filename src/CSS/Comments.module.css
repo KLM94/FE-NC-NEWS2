@@ -1,11 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+
 .commentsGrid {
   margin-top: 2em;
-  padding: 1em;
+  text-align: center;
+  width: 300px;
+}
+
+.saying {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-family: "Rozha One";
+  font-size: 30px;
 }
 
 .commentsContainer {
   border-style: solid;
-  margin-top: 1em;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 22em;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 200%;
+  background-image: linear-gradient(#af3b66, #f094b6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
+}
+
+.votes {
+  text-align: left;
+}
+
+.addcomment {
+  font-family: "Rozha One";
+  font-size: 20px;
+  border-style: solid;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 12em;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+  width: 60%;
+  border-radius: 30px;
+  background-color: #a53860;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
+}
+
+.deleteButton {
+  background-color: bisque;
+  font-family: "Rajdhani";
+  font-size: 15px;
+  font-weight: bold;
+  width: 20%;
+  border-style: none;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.commentbody {
+  font-family: "Rajdhani";
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 500px) {

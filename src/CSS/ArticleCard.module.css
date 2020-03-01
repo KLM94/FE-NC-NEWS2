@@ -12,14 +12,23 @@
 }
 
 .articleContainer {
+  font-family: "Rajdhani";
+  font-size: 20px;
   background-color: #a53860;
   border-style: solid;
   margin-bottom: 30px;
   list-style-type: none;
-  border-radius: 30px;
+  border-radius: 5px;
   padding-top: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
   background-image: linear-gradient(#af3b66, #f094b6);
+  transition: 0.3s;
+}
+
+.articleContainer:hover {
+  background-color: #3e8e41;
+  border: none;
+  color: bisque;
 }
 
 .publishedby {

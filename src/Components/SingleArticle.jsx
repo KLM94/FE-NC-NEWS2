@@ -29,23 +29,26 @@ class SingleArticle extends Component {
     if (isLoading) return <LoadingIndicator />;
 
     return (
-      <div className={styles.fullarticle} key="article">
-        {/* <section className={styles.votes}></section> */}
-        <h2 className={styles.articletitle}> {article.title} </h2>
-        <div className={styles.publishedby}>
-          <em>
-            Published by <b>{`${article.author}`} </b> on{" "}
-            {new Date(article.created_at).toLocaleDateString()}
-          </em>
+      <main>
+        <div className={styles.fullarticle} key="article">
+          {/* <section className={styles.votes}></section> */}
+          <h2 className={styles.articletitle}> {article.title} </h2>
+          <div className={styles.publishedby}>
+            <em>
+              Published by <b>{`${article.author}`} </b> on{" "}
+              {new Date(article.created_at).toLocaleDateString()}
+            </em>
+          </div>
+          <br></br>
+          <section className={styles.articlebody}>{article.body}</section>
+          <div className={styles.votes}>
+            <Voting article_id={article.article_id} votes={article.votes} />
+          </div>
         </div>
-        <br></br>
-        <section className={styles.articlebody}>{article.body}</section>
-        <div className={styles.votes}>
-          <Voting article_id={article.article_id} votes={article.votes} />
+        <div className={styles.comments}>
+          <Comments article_id={article.article_id} />
         </div>
-        <p>Got something to say?</p>
-        <Comments article_id={article.article_id} />
-      </div>
+      </main>
     );
   }
 }

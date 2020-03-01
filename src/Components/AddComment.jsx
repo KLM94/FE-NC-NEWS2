@@ -40,7 +40,7 @@ class AddComment extends Component {
               required
             ></textarea>
             <br></br>
-            <button>Post it!</button>
+            <button className={styles.postbtn}>Post it!</button>
           </label>
         </form>
       </div>

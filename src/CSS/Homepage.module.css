@@ -5,10 +5,31 @@
   font-family: "DM Serif Display";
 }
 
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.articlecards {
+  width: 450px;
+  display: inline-block;
+  height: 100%;
+  margin-bottom: 50px;
+  /* margin-top: calc((100vh - 506px) / 2); */
+  margin-right: 0px;
+  margin-left: 0px;
+  /* box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2); */
+  font-family: "Rajdhani";
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 500px) {
   .latestArticles {
     font-size: 20px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
 }

@@ -15,48 +15,33 @@ class Topics extends Component {
       .catch(err => console.dir(err));
   }
 
+  mapImages() {
+    return {
+      coding: "https://i.ibb.co/pbXMzkp/coding.jpg",
+      cooking: "https://i.ibb.co/JBJKXYC/cooking.jpg",
+      football: "https://i.ibb.co/268xzF3/footie.jpg"
+    };
+  }
+
   render() {
     const { topics, isLoading } = this.state;
+
     if (isLoading) return <LoadingIndicator />;
     return (
-      <div>
-        <div className={styles.gridRow}>
-          <div className={styles.codingTitle}>CODING </div>
-          <img
-            src="https://i.ibb.co/pbXMzkp/coding.jpg"
-            alt="coding"
-            width="450"
-            height="400"
-          ></img>{" "}
-          <div className={styles.cookingTitle}></div>
-          <img
-            src="https://i.ibb.co/JBJKXYC/cooking.jpg"
-            alt="cooking"
-            width="450"
-            height="400"
-          ></img>
-          <div className={styles.footballTitle}>
-            <img
-              src="https://i.ibb.co/268xzF3/footie.jpg"
-              alt="football"
-              width="450"
-              height="400"
-            ></img>
-          </div>
-        </div>
-        <div className={styles.topicsContainer}>
-          {topics.map(topic => (
-            <div key={topic.slug}>
-              <Link
-                to={`/articles/topics/${topic.slug}`}
-                className={styles.topicLink}
-              >
-                {topic.slug}
-              </Link>
-              <div className={styles.topicDescription}>{topic.description}</div>
+      <div className={styles.gridContainer}>
+        {topics.map(topic => (
+          <Link to={`/articles/topics/${topic.slug}`} key={topic.slug}>
+            <div className={styles.pictures}>
+              <img
+                src={`${this.mapImages()[topic.slug]}`}
+                alt={topic.slug}
+                width="400"
+                height="400"
+              ></img>
             </div>
-          ))}
-        </div>
+            <div className={styles.gridItem}>{topic.slug}</div>
+          </Link>
+        ))}
       </div>
     );
   }

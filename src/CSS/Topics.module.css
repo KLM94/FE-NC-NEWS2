@@ -1,32 +1,60 @@
 @import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
 
-.topicsContainer {
-  margin-top: 2em;
-  margin-left: 2em;
-  height: 100%;
+.gridContainer {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  text-align: center;
+  position: relative;
 }
+.gridItem {
+  position: absolute;
+  font-size: 30px;
+  margin-bottom: 60px;
+  top: 50%;
+  margin-left: 240px;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-family: "Rozha One";
+  color: bisque;
+  background-color: #a5386060;
+  border-style: solid;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
+}
+
+/* .pictures {
+  border-style: solid;
+  border-color:
+} */
 
 .topicLink {
-  border: black;
-  border-style: outset;
-  box-shadow: black;
-  font-size: 50px;
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 20px;
 }
 
-.gridRow {
+.topicText {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .gridRow {
   display: flex;
   flex-wrap: nowrap;
   width: 100px;
   /* margin: 30px; */
-  text-align: center;
-  line-height: 75px;
-}
+/* text-align: center;
+  line-height: 75px; */
+/* }
 
 .codingTitle {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-}
+} */
 
 /* .cookingTitle {
   position: absolute;

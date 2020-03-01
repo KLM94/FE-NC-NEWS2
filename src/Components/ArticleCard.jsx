@@ -31,7 +31,7 @@ class ArticleCard extends Component {
                   </p>
                 </Link>
                 <ShowMoreText
-                  lines={6}
+                  lines={4}
                   more="Show more"
                   less="Show less"
                   anchorClass=""
