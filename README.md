@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Background
+
+This is a project I have created in React using NodeJS that display the front-end based on my back-end project. My website allows users to view articles, topics and comments posted by other users. A user is able to post/delete a comment only by the logged in user 'weegenbump'. A user can sort articles by comment counts, date created and votes and is able to upvote/downvote articles/comments. 
 
 ## Available Scripts
 
