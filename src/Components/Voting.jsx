@@ -3,9 +3,10 @@ import { patchVotesByArticleId, patchVotesByCommentId } from "../Api";
 import styles from "../CSS/Voting.module.css";
 import { FaHeart } from "react-icons/fa";
 import { IoMdArrowDropupCircle, IoMdArrowDropdownCircle } from "react-icons/io";
+import ErrorPage from "./ErrorPage";
 
 class Votes extends Component {
-  state = { updatedVotes: 0 };
+  state = { updatedVotes: 0, err: null };
 
   handleClick = inc_votes => {
     const { article_id, comment_id } = this.props;
@@ -14,18 +15,19 @@ class Votes extends Component {
     });
     if (!article_id)
       patchVotesByCommentId(comment_id, inc_votes).catch(err =>
-        console.dir(err)
+        this.setState({ err })
       );
     else {
       patchVotesByArticleId(article_id, inc_votes).catch(err =>
-        console.dir(err)
+        this.setState({ err })
       );
     }
   };
 
   render() {
     const { votes } = this.props;
-    const { updatedVotes } = this.state;
+    const { updatedVotes, err } = this.state;
+    if (err) return <ErrorPage err={err} />;
     return (
       <section>
         <div className={styles.articleVotesContainer}>

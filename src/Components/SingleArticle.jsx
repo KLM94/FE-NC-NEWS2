@@ -9,8 +9,8 @@ import ErrorPage from "./ErrorPage";
 class SingleArticle extends Component {
   state = { article: [], isLoading: true, err: null };
 
-  componentDidMount() {
-    getArticle(this.props.id)
+  componentDidMount({ id }) {
+    getArticle(id)
       .then(response => {
         this.setState({ article: response.data.article, isLoading: false });
       })
@@ -31,7 +31,6 @@ class SingleArticle extends Component {
     return (
       <main>
         <div className={styles.fullarticle} key="article">
-          {/* <section className={styles.votes}></section> */}
           <h2 className={styles.articletitle}> {article.title} </h2>
           <div className={styles.publishedby}>
             <em>

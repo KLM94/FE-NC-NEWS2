@@ -37,12 +37,11 @@
   border-style: solid;
   text-align: center;
   margin-top: 5px;
-  margin-left: 12em;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-left: 0.5em;
+
   margin-bottom: 1em;
   padding-bottom: 2em;
-  width: 60%;
+  width: 92%;
   border-radius: 30px;
   background-color: #a53860;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
@@ -60,6 +59,10 @@
   margin-bottom: 10px;
 }
 
+.publishedbyy {
+  font-family: "Rajdhani";
+}
+
 .commentbody {
   font-family: "Rajdhani";
   font-size: 20px;
@@ -67,6 +70,31 @@
 
 @media only screen and (max-width: 500px) {
   .commentsContainer {
+    padding-top: 0px;
     padding: 2em;
+    margin-left: 17px;
+    margin-top: 20px;
+    width: 90%;
+  }
+  .saying {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
+  }
+  .addcomment {
+    font-family: "Rozha One";
+    font-size: 15px;
+    height: 0%;
+  }
+  .deleteButton {
+    font-size: 13px;
+    width: 30%;
+  }
+  .commentsGrid {
+    margin-top: 0em;
+    padding-top: 0px;
+    text-align: center;
+    width: 300px;
   }
 }

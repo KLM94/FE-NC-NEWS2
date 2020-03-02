@@ -3,35 +3,44 @@ import LoadingIndicator from "../Components/LoadingIndicator";
 import styles from "../CSS/ArticlesList.module.css";
 import { getArticles } from "../Api";
 import ArticleCard from "./ArticleCard";
+import ErrorPage from "./ErrorPage";
 
 class ArticlesList extends Component {
-  state = { articles: [], isLoading: true, sortBy: "" };
+  state = { articles: [], isLoading: true, sortBy: "", err: null };
 
   componentDidMount() {
-    getArticles(this.props.topic, this.state.sortBy)
-      .then(response => {
-        this.setState({ articles: response.data.articles, isLoading: false });
-      })
-      .catch(err => console.dir(err));
+    const { topic } = this.props;
+    const { sortBy } = this.state;
+    getArticles(topic, sortBy).then(response => {
+      this.setState({ articles: response.data.articles, isLoading: false });
+    });
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.sortBy !== prevState.sortBy)
-      getArticles(this.props.topic, this.state.sortBy)
+    const { sortBy } = this.state;
+    const { topic } = this.props;
+    if (sortBy !== prevState.sortBy)
+      getArticles(topic, sortBy)
         .then(response => {
           this.setState({ articles: response.data.articles });
         })
-        .catch(err => console.dir(err));
+        .catch(({ response }) => {
+          this.setState({
+            err: { status: response.status, msg: response.data.msg },
+            isLoading: false
+          });
+        });
   }
 
   handleChange = event => {
     this.setState({ sortBy: event.target.value });
   };
 
-  // fetchArticles and use in component did mount when using params or id etc
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, err } = this.state;
+    if (err) return <ErrorPage err={err} />;
     if (isLoading) return <LoadingIndicator />;
+
     return (
       <div className={styles.sortbyGrid}>
         <label className={styles.sortBy}>Sort articles by: </label>

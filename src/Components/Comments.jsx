@@ -80,7 +80,7 @@ class Comments extends Component {
                           votes={comment.votes}
                         />
                       </div>
-                      <p>
+                      <p className={styles.publishedbyy}>
                         Posted by <b>{comment.author}</b> on{" "}
                         {`${new Date(
                           comment.created_at

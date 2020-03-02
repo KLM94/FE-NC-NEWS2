@@ -50,49 +50,6 @@
   color: bisque;
   text-shadow: 1px 2px #f5dd90;
 }
-/* .greeting {
-  text-align: right;
-  padding-right: 1%;
-}
-
-.headerText {
-  font-family: "Rozha One";
-  font-size: 60px;
-  margin-bottom: 0px;
-}
-
-.header {
-  flex: 1;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-  font-family: "Rozha One";
-  font-size: 0px;
-  /* text-shadow: 2px 2px #838380; 
-  /* background-color: #a53860; 
-}
-
-.headerCaption {
-  margin-bottom: 0.5em;
-  text-align: center;
-  font-size: 25px;
-  font-family: "Indie Flower";
-}
-
-
-
-.loggedInContainer {
-  margin-right: 1em;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.loginBtn {
-  text-align: right;
-  margin-right: 3.5em;
-  margin-top: 0px;
-  margin-bottom: 0px;
-} */
 
 @media only screen and (max-width: 500px) {
   .header {
@@ -116,7 +73,15 @@
     font-size: 25px;
   }
   .greeting {
+    margin-top: 0px;
+    padding-top: 0px;
     font-size: 10px;
-    text-align: center;
+    text-align: right;
+  }
+  .userlogo {
+    margin-right: 15%;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    text-align: right;
   }
 }

@@ -3,16 +3,22 @@ import { Link } from "@reach/router";
 import styles from "../CSS/Topics.module.css";
 import LoadingIndicator from "./LoadingIndicator";
 import { getTopics } from "../Api";
+import ErrorPage from "./ErrorPage";
 
 class Topics extends Component {
-  state = { topics: [], isLoading: true };
+  state = { topics: [], isLoading: true, err: null };
 
   componentDidMount() {
     getTopics()
       .then(response => {
         this.setState({ topics: response.data.topics, isLoading: false });
       })
-      .catch(err => console.dir(err));
+      .catch(({ response }) => {
+        this.setState({
+          err: { status: response.status, msg: response.data.msg },
+          isLoading: false
+        });
+      });
   }
 
   mapImages() {
@@ -24,8 +30,8 @@ class Topics extends Component {
   }
 
   render() {
-    const { topics, isLoading } = this.state;
-
+    const { topics, isLoading, err } = this.state;
+    if (err) return <ErrorPage err={err} />;
     if (isLoading) return <LoadingIndicator />;
     return (
       <div className={styles.gridContainer}>
@@ -33,6 +39,7 @@ class Topics extends Component {
           <Link to={`/articles/topics/${topic.slug}`} key={topic.slug}>
             <div className={styles.pictures}>
               <img
+                className={styles.img}
                 src={`${this.mapImages()[topic.slug]}`}
                 alt={topic.slug}
                 width="400"

@@ -13,7 +13,7 @@ export const Header = props => {
         </p>
       </div>
       <div className={styles.userlogo}>
-        <FaUserAlt size={20} />
+        <FaUserAlt size={15} />
       </div>
       <div className={styles.greeting}>
         <em>

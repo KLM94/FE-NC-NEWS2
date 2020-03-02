@@ -2,20 +2,29 @@ import React, { Component } from "react";
 import styles from "../CSS/Homepage.module.css";
 import { getArticles } from "../Api";
 import ArticleCard from "./ArticleCard";
+import ErrorPage from "./ErrorPage";
+import LoadingIndicator from "./LoadingIndicator";
 
 class Homepage extends Component {
-  state = { articles: [] };
+  state = { articles: [], err: null, isLoading: true };
 
   componentDidMount() {
     getArticles()
       .then(response => {
-        this.setState({ articles: response.data.articles });
+        this.setState({ articles: response.data.articles, isLoading: false });
       })
-      .catch(err => console.dir(err));
+      .catch(({ response }) => {
+        this.setState({
+          err: { status: response.status, msg: response.data.msg },
+          isLoading: false
+        });
+      });
   }
 
   render() {
-    const { articles } = this.state;
+    const { articles, err, isLoading } = this.state;
+    if (err) return <ErrorPage err={err} />;
+    if (isLoading) return <LoadingIndicator />;
     let size = 3;
 
     return (

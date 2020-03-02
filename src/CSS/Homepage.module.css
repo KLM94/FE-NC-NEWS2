@@ -30,6 +30,17 @@
   .latestArticles {
     font-size: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  .articlecards {
+    width: 350px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  .articles {
+    padding: 0px;
+    margin: 0px;
   }
 }

@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Gravitas+One|DM+Serif+Display|Libre+Baskerville|Amatic+SC|Rajdhani|Cinzel|Exo+2|Indie+Flower");
+
 .errmsg {
+  font-family: "Rozha One";
   text-align: center;
   font-size: 30px;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  padding-bottom: 200px;
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getArticle = id => {
+export const getArticle = ({ id }) => {
   const baseURL = `https://kirstys-nc-news.herokuapp.com/api/articles/${id}`;
   return axios.get(baseURL);
 };
@@ -22,22 +22,16 @@ export const getComments = id => {
 
 export const postComment = (body, article_id, username) => {
   const baseURL = `https://kirstys-nc-news.herokuapp.com/api/articles/${article_id}/comments`;
-  return axios
-    .post(baseURL, { body, username })
-    .then(res => {
-      return res.data.comment;
-    })
-    .catch(err => console.dir(err));
+  return axios.post(baseURL, { body, username }).then(res => {
+    return res.data.comment;
+  });
 };
 
 export const deleteComment = comment_id => {
   const baseURL = `https://kirstys-nc-news.herokuapp.com/api/comments/${comment_id}`;
-  return axios
-    .delete(baseURL)
-    .then(res => {
-      return res.data.comment;
-    })
-    .catch(err => console.dir(err));
+  return axios.delete(baseURL).then(res => {
+    return res.data.comment;
+  });
 };
 
 export const patchVotesByArticleId = (article_id, inc_votes) => {

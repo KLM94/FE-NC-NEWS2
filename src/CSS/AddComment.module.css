@@ -27,6 +27,14 @@
 
 @media only screen and (max-width: 500px) {
   .textArea {
-    width: 200px;
+    width: 250px;
+  }
+
+  .commentsGrid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }

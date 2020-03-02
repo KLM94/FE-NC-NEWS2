@@ -40,4 +40,20 @@
   .fullarticle {
     margin-top: 1em;
   }
+  .fullarticle {
+    width: 300px;
+    margin-left: 4px;
+    box-shadow: none;
+  }
+  .publishedby {
+    font-size: 18px;
+  }
+  .articlebody {
+    font-family: "Rajdhani";
+    font-size: 17px;
+  }
+  .articletitle {
+    font-family: "Rozha One";
+    font-size: 19px;
+  }
 }

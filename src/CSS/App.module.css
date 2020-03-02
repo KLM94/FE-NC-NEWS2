@@ -1,8 +1,7 @@
 .body {
   background-color: rgba(255, 228, 196, 0.459);
-
   height: 100%;
-  border: 1px solid;
+  width: 100%;
 }
 
 /* background-image: url("https://i.pinimg.com/564x/06/b4/6f/06b46f5d0e6a6b373f147fd04d3a868a.jpg");

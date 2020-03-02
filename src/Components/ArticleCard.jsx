@@ -5,14 +5,13 @@ import ShowMoreText from "react-show-more-text";
 import { FaRegComment } from "react-icons/fa";
 
 class ArticleCard extends Component {
-  executeOnClick(isExpanded) {
-    console.log(isExpanded);
-  }
+  executeOnClick(isExpanded) {}
 
   render() {
+    const { articles } = this.props;
     return (
       <ul className={styles.articleGrid}>
-        {this.props.articles.map(article => {
+        {articles.map(article => {
           return (
             <li key={article.article_id}>
               <div className={styles.articleContainer}>

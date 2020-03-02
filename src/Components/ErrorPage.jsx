@@ -7,7 +7,7 @@ const ErrorPage = ({ err }) => {
       <div className={styles.errmsg}>
         {" "}
         <p>
-          {err.status} - {err.msg}{" "}
+          Status: {err.status} - {err.msg}{" "}
         </p>
         <img
           src="https://media.giphy.com/media/BszAxoVuqv8Ig/giphy.gif"
