@@ -7,6 +7,7 @@ Links to the hosted version can be found below, where you can also find links to
 # Setting up
 
 You will need to have NodeJs which you can download [here](https://nodejs.org/en/).
+Make sure you use version v12.12.0 or later.
 
 Fork this repo and clone it onto your machine.
 
