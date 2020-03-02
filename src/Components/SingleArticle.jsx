@@ -9,8 +9,8 @@ import ErrorPage from "./ErrorPage";
 class SingleArticle extends Component {
   state = { article: [], isLoading: true, err: null };
 
-  componentDidMount({ id }) {
-    getArticle(id)
+  componentDidMount() {
+    getArticle(this.props.id)
       .then(response => {
         this.setState({ article: response.data.article, isLoading: false });
       })

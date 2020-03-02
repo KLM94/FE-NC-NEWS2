@@ -10,18 +10,25 @@ import styles from "./CSS/App.module.css";
 import ErrorPage from "./Components/ErrorPage";
 
 class App extends Component {
-  state = { loggedInUser: "weegenbump" };
+  state = {
+    loggedInUser: "weegenbump",
+    users: ["jessjelly", "cooljmessy", "tickle122"]
+  };
 
   selectUser = loggedInUser => {
     this.setState({ loggedInUser: loggedInUser });
   };
 
   render() {
-    const { loggedInUser } = this.state;
+    const { loggedInUser, users } = this.state;
     return (
       <div className={styles.bgfade}>
         <main className={styles.body}>
-          <Header loggedInUser={loggedInUser} selectUser={this.selectUser} />
+          <Header
+            loggedInUser={loggedInUser}
+            selectUser={this.selectUser}
+            users={users}
+          />
           <NavBar />
           <Router>
             <Homepage path="/" />
@@ -29,7 +36,10 @@ class App extends Component {
             <SingleArticle path="/articles/:id" />
             <Topics path="/topics" />
             <ArticlesList path="/articles/topics/:topic" />
-            <ErrorPage default />
+            <ErrorPage
+              default
+              err={{ status: 404, data: { msg: "Page Not Found" } }}
+            />
           </Router>
         </main>
       </div>

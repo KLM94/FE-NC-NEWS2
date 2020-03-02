@@ -25,6 +25,7 @@
   width: 200%;
   background-image: linear-gradient(#af3b66, #f094b6);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
+  margin-bottom: 20px;
 }
 
 .votes {
@@ -37,11 +38,11 @@
   border-style: solid;
   text-align: center;
   margin-top: 5px;
-  margin-left: 0.5em;
+  margin-left: 9.5em;
 
   margin-bottom: 1em;
   padding-bottom: 2em;
-  width: 92%;
+  width: 70%;
   border-radius: 30px;
   background-color: #a53860;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
