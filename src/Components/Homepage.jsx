@@ -25,23 +25,12 @@ class Homepage extends Component {
     const { articles, err, isLoading } = this.state;
     if (err) return <ErrorPage err={err} />;
     if (isLoading) return <LoadingIndicator />;
-    let size = 3;
 
     return (
       <div>
         <h1 className={styles.latestArticles}>Latest Articles</h1>
         <div className={styles.articles}>
-          {articles.slice(0, size).map(article => {
-            return (
-              <div key={article.id}>
-                {" "}
-                <div className={styles.articlecards}>
-                  {" "}
-                  <ArticleCard articles={[article]} />{" "}
-                </div>
-              </div>
-            );
-          })}
+          <ArticleCard articles={articles} articleLimit={3} />
         </div>
       </div>
     );

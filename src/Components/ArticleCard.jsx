@@ -11,7 +11,7 @@ class ArticleCard extends Component {
     const { articles } = this.props;
     return (
       <ul className={styles.articleGrid}>
-        {articles.map(article => {
+        {articles.slice(0, this.props.articleLimit).map(article => {
           return (
             <li key={article.article_id}>
               <div className={styles.articleContainer}>
@@ -24,7 +24,10 @@ class ArticleCard extends Component {
                     </em>
                   </p> */}
                 </div>
-                <Link to={`/articles/${article.article_id}`}>
+                <Link
+                  to={`/articles/${article.article_id}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <p className={styles.title}>
                     <b>{article.title}</b>
                   </p>
@@ -43,13 +46,6 @@ class ArticleCard extends Component {
                 <p>
                   <FaRegComment /> {article.comment_count}
                 </p>
-                <p></p>
-
-                {/* <div className={styles.viewMoreArticles}>
-                  <Link to={`/articles/${article.article_id}`}>
-                    View full article
-                  </Link>
-                </div> */}
               </div>
             </li>
           );
@@ -58,5 +54,9 @@ class ArticleCard extends Component {
     );
   }
 }
+
+ArticleCard.defaultProps = {
+  articleLimit: -1
+};
 
 export default ArticleCard;

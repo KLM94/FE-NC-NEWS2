@@ -13,7 +13,7 @@
 
 .articleContainer {
   font-family: "Rajdhani";
-  font-size: 20px;
+  font-size: 18px;
   background-color: #a53860;
   border-style: solid;
   margin-bottom: 30px;
@@ -63,10 +63,26 @@
   background-color: rgba(0, 0, 0, 0.589);
 }
 
+/* unvisited link */
+.title:link {
+  text-decoration: none;
+}
+
+/* visited link */
+.title:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
 .title:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: bisque;
   color: #a53860;
   text-decoration: underline;
+}
+
+/* selected link */
+.title:active {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 500px) {
