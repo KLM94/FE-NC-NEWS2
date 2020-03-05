@@ -42,17 +42,9 @@
     margin-top: 20px;
   }
 
-  /* .topicLink {
-    display: flex;
-    flex-wrap: wrap;
-  } */
-  /* .topicText {
-    display: flex;
-    flex-wrap: wrap;
-  } */
-
   .gridItem {
     top: 25%;
+    font-size: xx-large;
   }
 
   .img {

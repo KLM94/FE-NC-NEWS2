@@ -37,17 +37,6 @@
   color: bisque;
 }
 
-/* .publishedbyContainer {
-  border-style: solid;
-  background-color: black;
-  width: 410px;
-  border-radius: 60px;
-  position: relative;
-  border-width: 0.8em 15px 0.5em;
-   border-top-left-radius: 90%;
-  border-top-right-radius: 90%; 
-} */
-
 .viewMoreArticles {
   margin-bottom: 1em;
 }
@@ -63,24 +52,20 @@
   background-color: rgba(0, 0, 0, 0.589);
 }
 
-/* unvisited link */
 .title:link {
   text-decoration: none;
 }
 
-/* visited link */
 .title:visited {
   text-decoration: none;
 }
 
-/* mouse over link */
 .title:hover {
   background-color: bisque;
   color: #a53860;
   text-decoration: underline;
 }
 
-/* selected link */
 .title:active {
   text-decoration: none;
 }

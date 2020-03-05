@@ -52,11 +52,6 @@ class Comments extends Component {
     } else {
       return (
         <div>
-          {/* <p>
-            {article.comment_count > 1
-              ? `There are ${article.comment_count} comments for this article.`
-              : `There is ${article.comment_count} comment for this article.`}
-          </p> */}
           <div className={styles.commentContainer}>
             <div className={styles.addcomment}>
               <p>Got something to say?</p>

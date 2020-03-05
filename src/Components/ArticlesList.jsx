@@ -11,9 +11,16 @@ class ArticlesList extends Component {
   componentDidMount() {
     const { topic } = this.props;
     const { sortBy } = this.state;
-    getArticles(topic, sortBy).then(response => {
-      this.setState({ articles: response.data.articles, isLoading: false });
-    });
+    getArticles(topic, sortBy)
+      .then(response => {
+        this.setState({ articles: response.data.articles, isLoading: false });
+      })
+      .catch(({ response }) => {
+        this.setState({
+          err: { status: response.status, msg: response.data.msg },
+          isLoading: false
+        });
+      });
   }
 
   componentDidUpdate(prevProps, prevState) {

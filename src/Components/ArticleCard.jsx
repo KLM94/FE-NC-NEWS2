@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styles from "../CSS/ArticleCard.module.css";
 import { Link } from "@reach/router";
 import ShowMoreText from "react-show-more-text";
-import { FaRegComment } from "react-icons/fa";
+import { FaRegComment, FaHeart } from "react-icons/fa";
 
 class ArticleCard extends Component {
   executeOnClick(isExpanded) {}
@@ -15,15 +15,7 @@ class ArticleCard extends Component {
           return (
             <li key={article.article_id}>
               <div className={styles.articleContainer}>
-                <div className={styles.publishedbyContainer}>
-                  {/* <p className={styles.publishedby}>
-                    <em>
-                      {`Published by ${article.author} on ${new Date(
-                        article.created_at
-                      ).toLocaleDateString()} in ${article.topic}`}
-                    </em>
-                  </p> */}
-                </div>
+                <div className={styles.publishedbyContainer}></div>
                 <Link
                   to={`/articles/${article.article_id}`}
                   style={{ textDecoration: "none" }}
@@ -44,7 +36,8 @@ class ArticleCard extends Component {
                   {article.body}
                 </ShowMoreText>
                 <p>
-                  <FaRegComment /> {article.comment_count}
+                  <FaRegComment /> {article.comment_count} <FaHeart size={15} />{" "}
+                  {article.votes}
                 </p>
               </div>
             </li>

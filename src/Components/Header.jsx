@@ -19,14 +19,6 @@ export const Header = props => {
               Logged In: <b>{props.loggedInUser}</b>
             </div>
           </em>
-          {/* <section className={styles.selectuser}>
-            <p>Select User:</p>
-            <select className={styles.dropdown} onChange={() => {}}>
-              {users.map(user => {
-                return <option key={user}>{user}</option>;
-              })}
-            </select>
-          </section> */}
         </div>
       </div>
     </header>
