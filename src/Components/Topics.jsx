@@ -46,7 +46,7 @@ class Topics extends Component {
                 height="400"
               ></img>
             </div>
-            <div className={styles.gridItem}>{topic.slug}</div>
+            <span className={styles.gridItem}>{topic.slug}</span>
           </Link>
         ))}
       </div>

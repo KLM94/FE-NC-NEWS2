@@ -8,20 +8,19 @@
   text-align: center;
   position: relative;
 }
+
 .gridItem {
   position: absolute;
-  font-size: 30px;
-  margin-bottom: 60px;
-  top: 50%;
-  margin-left: 210px;
-  transform: translate(-50%, -50%);
+  bottom: 150px;
   font-size: 60px;
+  transform: translate(-50%, -50%);
   font-family: "Rozha One";
   color: bisque;
   background-color: #a5386060;
   border-style: solid;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
 }
+
 .topicLink {
   position: relative;
   text-align: center;
@@ -43,8 +42,10 @@
   }
 
   .gridItem {
-    top: 25%;
+    position: relative;
+    /* top: 25%; */
     font-size: xx-large;
+    bottom: 175px;
   }
 
   .img {
